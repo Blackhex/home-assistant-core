@@ -13,6 +13,7 @@ APPLICATION_CREDENTIALS = [
     "home_connect",
     "lametric",
     "lyric",
+    "microsoft_teams_presence",
     "neato",
     "nest",
     "netatmo",
