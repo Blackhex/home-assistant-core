@@ -11,8 +11,8 @@ from homeassistant.components.application_credentials import (
 )
 from homeassistant.components.microsoft_teams_presence.const import (
     DOMAIN,
-    OAUTH2_AUTHORIZE,
-    OAUTH2_TOKEN,
+    OAUTH2_AUTHORIZE_URL,
+    OAUTH2_TOKEN_URL,
 )
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers import config_entry_oauth2_flow
@@ -53,7 +53,7 @@ async def test_full_flow(
     )
 
     assert result["url"] == (
-        f"{OAUTH2_AUTHORIZE}?response_type=code&client_id={CLIENT_ID}"
+        f"{OAUTH2_AUTHORIZE_URL}?response_type=code&client_id={CLIENT_ID}"
         "&redirect_uri=https://example.com/auth/external/callback"
         f"&state={state}"
     )
@@ -64,7 +64,7 @@ async def test_full_flow(
     assert resp.headers["content-type"] == "text/html; charset=utf-8"
 
     aioclient_mock.post(
-        OAUTH2_TOKEN,
+        OAUTH2_TOKEN_URL,
         json={
             "refresh_token": "mock-refresh-token",
             "access_token": "mock-access-token",

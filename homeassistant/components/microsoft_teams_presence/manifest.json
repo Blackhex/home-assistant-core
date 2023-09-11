@@ -5,7 +5,7 @@
   "config_flow": true,
   "dependencies": ["application_credentials"],
   "documentation": "https://www.home-assistant.io/integrations/microsoft_teams_presence",
-  "integration_type": "device",
+  "integration_type": "service",
   "iot_class": "cloud_push",
-  "requirements": []
+  "requirements": ["azure-identity==1.14.0", "msgraph-sdk==1.0.0a14"]
 }

@@ -427,6 +427,9 @@ axis==48
 # homeassistant.components.azure_event_hub
 azure-eventhub==5.11.1
 
+# homeassistant.components.microsoft_teams_presence
+azure-identity==1.14.0
+
 # homeassistant.components.homekit
 base36==0.1.1
 
@@ -953,6 +956,9 @@ motionblinds==0.6.18
 
 # homeassistant.components.motioneye
 motioneye-client==0.3.14
+
+# homeassistant.components.microsoft_teams_presence
+msgraph-sdk==1.0.0a14
 
 # homeassistant.components.mullvad
 mullvad-api==1.0.0

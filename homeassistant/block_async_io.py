@@ -9,7 +9,7 @@ def enable() -> None:
     """Enable the detection of blocking calls in the event loop."""
     # Prevent urllib3 and requests doing I/O in event loop
     HTTPConnection.putrequest = protect_loop(  # type: ignore[method-assign]
-        HTTPConnection.putrequest
+        HTTPConnection.putrequest, strict=False
     )
 
     # Prevent sleeping in event loop. Non-strict since 2022.02
