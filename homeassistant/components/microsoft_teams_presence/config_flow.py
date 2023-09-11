@@ -1,19 +1,25 @@
 """Config flow for Microsoft Teams Presence."""
-import logging
+from typing import Any
 
-from homeassistant.helpers import config_entry_oauth2_flow
+from homeassistant import config_entries
+from homeassistant.data_entry_flow import FlowResult
 
 from .const import DOMAIN
 
 
-class OAuth2FlowHandler(
-    config_entry_oauth2_flow.AbstractOAuth2FlowHandler, domain=DOMAIN
-):
-    """Config flow to handle Microsoft Teams Presence OAuth2 authentication."""
+class TeamsPresenceConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
+    """Example config flow."""
 
-    DOMAIN = DOMAIN
+    # The schema version of the entries that it creates
+    # Home Assistant will call your migrate method if the version changes
+    VERSION = 1
 
-    @property
-    def logger(self) -> logging.Logger:
-        """Return logger."""
-        return logging.getLogger(__name__)
+    async def async_step_user(
+        self, user_input: dict[str, Any] | None = None
+    ) -> FlowResult:
+        """Setups config flow."""
+        return self.async_create_entry(
+            title="Test Title",
+            data={"item": "Test Data Item"},
+            options={},
+        )

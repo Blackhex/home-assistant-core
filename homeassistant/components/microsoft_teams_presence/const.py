@@ -1,7 +1,10 @@
 """Constants for the Microsoft Teams Presence integration."""
+import logging
+from typing import Final
 
-DOMAIN = "microsoft_teams_presence"
+from homeassistant.const import Platform
 
-# TODO Update with your own urls
-OAUTH2_AUTHORIZE = "https://www.example.com/auth/authorize"
-OAUTH2_TOKEN = "https://www.example.com/auth/token"
+DOMAIN: Final = "microsoft_teams_presence"
+PLATFORMS: list[Platform] = [Platform.BINARY_SENSOR]
+
+LOGGER = logging.getLogger(__package__)

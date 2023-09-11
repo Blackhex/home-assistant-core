@@ -1,13 +1,11 @@
 {
   "domain": "microsoft_teams_presence",
   "name": "Microsoft Teams Presence",
-  "codeowners": ["@Blackhex"],
+  "codeowners": [],
   "config_flow": true,
   "dependencies": ["application_credentials"],
   "documentation": "https://www.home-assistant.io/integrations/microsoft_teams_presence",
-  "homekit": {},
+  "integration_type": "device",
   "iot_class": "cloud_push",
-  "requirements": [],
-  "ssdp": [],
-  "zeroconf": []
+  "requirements": []
 }
