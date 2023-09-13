@@ -3401,12 +3401,6 @@
         }
       }
     },
-    "microsoft_teams_presence": {
-      "name": "Microsoft Teams Presence",
-      "integration_type": "service",
-      "config_flow": true,
-      "iot_class": "cloud_push"
-    },
     "mijndomein_energie": {
       "name": "Mijndomein Energie",
       "integration_type": "virtual",

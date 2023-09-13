@@ -1,6 +1,7 @@
 {
   "domain": "microsoft_teams_presence",
   "name": "Microsoft Teams Presence",
+  "version": "0.1",
   "codeowners": [],
   "config_flow": true,
   "dependencies": ["application_credentials"],
