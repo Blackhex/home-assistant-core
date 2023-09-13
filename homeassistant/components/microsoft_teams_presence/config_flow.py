@@ -38,9 +38,9 @@ class TeamsPresenceConfigFlow(
     async def async_oauth_create_entry(self, data: dict) -> FlowResult:
         """Create an oauth config entry."""
 
-        user = await self._test(data)
+        # user = await self._test(data)
 
-        self.logger.info("User presence: %s", user)
+        # self.logger.info("User presence: %s", user)
 
         return await super().async_oauth_create_entry(data)
 
